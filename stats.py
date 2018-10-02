@@ -1,5 +1,6 @@
 
 class Stats:
     def calc_stats(self, entrada):
-        return [0]
+        num = entrada.split(',').count
+        return [len(num)]
 

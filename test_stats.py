@@ -1,6 +1,10 @@
 from unittest import TestCase
+import stats
 
 
 class TestStats(TestCase):
     def test_calc_stats(self):
-        self.fail()
+        result = stats.calc_stats("")
+        a = [0]
+        self.assertTrue(result == a)
+

@@ -3,7 +3,7 @@ class Stats:
     def calc_stats(self, entrada):
         num_elements = self.num_elements(entrada)
 
-        if num_elements == 0 or num_elements == 1:
+        if num_elements == 0 or num_elements == 1 or num_elements == 2:
             min_elements = self.min_elements(entrada)
             resp = [
                 num_elements,

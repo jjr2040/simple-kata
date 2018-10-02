@@ -14,9 +14,9 @@ class TestStats(TestCase):
         result = stats.calc_stats("1,10")
         a = [2, 1, 10]
         self.assertTrue(result == a, msg="Cuando hay 2 elemento en el string")
-        # result = stats.calc_stats("1,10,8,4,12")
-        # a = [5, 1]
-        # self.assertTrue(result == a, msg="Cuando hay n elemento en el string")
+        result = stats.calc_stats("1,10,8,4,12")
+        a = [5, 1, 12]
+        self.assertTrue(result == a, msg="Cuando hay n elemento en el string")
 
 
 

@@ -17,7 +17,16 @@ class Stats:
         return len(string.split(',')) if string.strip() is not '' else 0
 
     def min_elements(self, string):
-        return int(min(string.split(','))) if string.strip() is not '' else 0
+        if string.strip() is '':
+            return 0
+        else:
+            return min(self.string_array_to_int_array(string))
 
     def max_elements(self, string):
-        return int(max(string.split(','))) if string.strip() is not '' else 0
+        if string.strip() is '':
+            return 0
+        else:
+            return max(self.string_array_to_int_array(string))
+
+    def string_array_to_int_array(self, string):
+        return [int(x) for x in string.split(',')]

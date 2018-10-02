@@ -10,4 +10,4 @@ class Stats:
         return resp
 
     def num_elements(self, string):
-        return len(string.split(','))
+        return len(string.split(',')) if string.strip() is not '' else 0

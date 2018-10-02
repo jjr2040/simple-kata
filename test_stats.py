@@ -8,9 +8,9 @@ class TestStats(TestCase):
         result = stats.calc_stats("")
         a = [0, 0, 0, 0]
         self.assertTrue(result == a, msg="Cuando string llega vacio")
-        # result = stats.calc_stats("1")
-        # a = [1, 1, 1]
-        # self.assertTrue(result == a,  msg="Cuando hay 1 elemento en el string")
+        result = stats.calc_stats("1")
+        a = [1, 1, 1, 1]
+        self.assertTrue(result == a,  msg="Cuando hay 1 elemento en el string")
         # result = stats.calc_stats("1,10")
         # a = [2, 1, 10]
         # self.assertTrue(result == a, msg="Cuando hay 2 elemento en el string")

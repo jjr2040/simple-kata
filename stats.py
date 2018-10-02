@@ -20,4 +20,4 @@ class Stats:
         return int(min(string.split(','))) if string.strip() is not '' else 0
 
     def max_elements(self, string):
-        return int(1) if string.strip() is not '' else 0
+        return int(max(string.split(','))) if string.strip() is not '' else 0

@@ -6,7 +6,7 @@ class TestStats(TestCase):
     def test_calc_stats(self):
         stats = Stats()
         result = stats.calc_stats("")
-        a = [0]
+        a = [0, 0]
         self.assertTrue(result == a, msg="Cuando string llega vacio")
         result = stats.calc_stats("1")
         a = [1]
@@ -17,5 +17,6 @@ class TestStats(TestCase):
         result = stats.calc_stats("1,10,8,4,12")
         a = [5]
         self.assertTrue(result == a, msg="Cuando hay n elemento en el string")
+
 
 

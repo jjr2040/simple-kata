@@ -34,7 +34,7 @@ class Stats:
         if string.strip() is '':
             return 0
         else:
-            return 1
+            return sum(self.string_array_to_int_array(string)) / len(string.split(','))
 
     def string_array_to_int_array(self, string):
         return [int(x) for x in string.split(',')]

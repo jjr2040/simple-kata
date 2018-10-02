@@ -31,7 +31,10 @@ class Stats:
             return max(self.string_array_to_int_array(string))
 
     def avg_elements(self, string):
-        return 0
+        if string.strip() is '':
+            return 0
+        else:
+            return 1
 
     def string_array_to_int_array(self, string):
         return [int(x) for x in string.split(',')]

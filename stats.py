@@ -1,6 +1,13 @@
 
 class Stats:
     def calc_stats(self, entrada):
-        num_elements = entrada.split(',')
-        return [len(num_elements)]
+        num_elements = self.num_elements(entrada)
 
+        resp = [
+            num_elements
+        ]
+
+        return resp
+
+    def num_elements(self, string):
+        return len(string.split(','))

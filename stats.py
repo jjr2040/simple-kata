@@ -3,17 +3,11 @@ class Stats:
     def calc_stats(self, entrada):
         num_elements = self.num_elements(entrada)
 
-        if num_elements == 0 or num_elements == 1 or num_elements == 2:
-            min_elements = self.min_elements(entrada)
-            resp = [
-                num_elements,
-                min_elements
-            ]
-        else:
-
-            resp = [
-                num_elements
-            ]
+        min_elements = self.min_elements(entrada)
+        resp = [
+            num_elements,
+            min_elements
+        ]
 
         return resp
 
@@ -21,4 +15,4 @@ class Stats:
         return len(string.split(',')) if string.strip() is not '' else 0
 
     def min_elements(self, string):
-        return 1 if string.strip() is not '' else 0
+        return int(min(string.split(','))) if string.strip() is not '' else 0
